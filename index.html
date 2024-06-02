@@ -1,148 +1,327 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.default.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Danfo&display=swap" rel="stylesheet">
+    <style type="text/css">
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        html {
+            background: #FFF8CC;
+            min-height: 100%;
+            font-family: Helvetica;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            margin: 0;
+            padding: 0 15px;
+            display: flex;
+            flex-direction: column;
+            flex: auto;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        h1,
+        p {
+            color: #006064;
+        }
+
+        img {
+            border: 0;
+        }
+
+        .header {
+            width: 100%;
+            min-width: 460px;
+            max-width: 960px;
+            margin: 0 auto 30px;
+            padding: 30px 0 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+            margin: 5px 0 0 5px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex: none;
+            align-items: center;
+            background: #839FFF;
+            width: 130px;
+            height: 50px;
+        }
+
+        .nav {
+            margin: -5px 0 0 -5px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            background: #BDC7FF;
+            width: 130px;
+            height: 50px;
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            margin: 5px 0 0 5px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sqr {
+            height: 300px;
+            width: 300px;
+            background: #FFDB89;
+        }
+
+        .main {
+            width: 100%;
+            min-width: 460px;
+            max-width: 960px;
+            margin: auto;
+            flex: auto;
+            box-sizing: border-box;
+        }
+
+        .box {
+            font-size: 1.25rem;
+            line-height: 1.5;
+            margin: 0 0 40px -50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .box-base {
+            margin-left: 50px;
+            flex: 1 0 430px;
+        }
+
+        .box-side {
+            margin-left: 50px;
+            font: none;
+        }
+
+        .box-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .content {
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .banners {
+            flex: 1 1 200px;
+        }
+
+        .banner {
+            background: #FFDB89;
+            width: 100%;
+            min-width: 100px;
+            min-height: 200px;
+            font-size: 3rem;
+            color: #fff;
+            margin: 0 0 30px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .posts {
+            margin: 0 0 30px 30px;
+            flex: 1 1 200px;
+        }
+
+        .comments {
+            margin: 0 0 30px 30px;
+            flex: 1 1 200px;
+        }
+
+        .comment {
+            display: flex;
+        }
+
+        .comment-side {
+            padding-right: 20px;
+            flex: none;
+        }
+
+        .comment-base {
+            flex: auto;
+        }
+
+        .comment-avatar {
+            background: #FFA985;
+            width: 50px;
+            height: 50px;
+        }
+
+        .footer {
+            background: #FF3366;
+            width: 100%;
+            max-width: 960px;
+            min-width: 460px;
+            color: #fff;
+            margin: auto;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width: 800px) {
+            .banners {
+                margin-left: -30px;
+                display: flex;
+                flex-basis: 100%;
+            }
+
+            .banner {
+                margin-left: 30px;
+            }
+
+            .posts {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .content {
+                display: block;
+            }
+
+            .banners {
+                margin: 0;
+                display: block;
+            }
+
+            .banner {
+                margin-left: 0;
+            }
+
+            .posts {
+                margin: 0;
+            }
+        }
+    </style>
 </head>
 
-<header>
-    <img src="Frame56.png" width="200" draggable="false" alt="Logo">
-  <nav>
- <ul class="menu">
- <il><a href="#">Home</a></il>
- <il class= "drpdown"><a>Services</a>
-    <ul class="dropdown-content">
- <li><a href="#">Web desiggn</a></li>
- <li><a href="#">SEO</a></li>
- <li><a href="#">Marketing</a></li>
-    </ul>
- </il>
- <li><a href="#">About</a></li>
- <li><a href="#">Contact</a></li>
- <main>
- <div class="post">
-     <p>
-     </ul>
-</nav>> 
-</header>
 <body>
-    
-    <!-- Head -->
-    
-    <!-- Main -->
-    
-    <main>
-        <div class="owl-carousel">
-        <div class="item"><h4>1</h4></div>
-        <div class="item"><h4>2</h4></div>
-        <div class="item"><h4>3</h4></div>
-        <div class="item"><h4>4</h4></div>
-        <div class="item"><h4>5</h4></div>
-        <div class="item"><h4>6</h4></div>
-            <img src="https://i.imgur.com/dskn6ud.png" height="250">
-            <div>
-                <h3>Lego Spider-man</h3>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate maiores fugit cum dolores magni
-                    minus quo, obcaecati voluptates enim tempora deserunt asperiores eius doloremque ducimus vel optio
-                    quibusdam. Veritatis, velit.
-                </p>
-                <a href="#">Read more</a>
+    <header class="header">
+        <a class="logo">
+            LOGO
+        </a>
+        <nav class="nav">
+            <a href="#posts" class="nav-item">Пости</a>
+            <a href="#comments" class="nav-item">Коментарі</a>
+            <a href="#footer" class="nav-item">Цікаве</a>
+            <a href="#posts" class="nav-item">Корисне</a>
+        </nav>
+
+    </header>
+    <main class="main">
+        <div class="box">
+            <div class="box-base">
+                <h1>Полуниця</h1>
+                <p>Згідно зі Словником Грінченка, слово полуниця історично вживалось щодо одного з видів роду Fragaria,
+                    а саме суниць зелених (Fragaria collina). У середині XX ст. полуницями називають вже і суниці
+                    мускусні. Сучасна мовна практика розподіляє терміни «суниці» і «полуниці» таким чином: перший
+                    вживається щодо диких, лісових ягід, другий — щодо культурних, садових (при тому, що існує також
+                    культурна форма лісових суниць).а</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/HbqC97sVXcQ?si=kBWFo3mS6HiTPP5W"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="box-side">
+                <div class="sqr ">
+                <img src="polunytsya_statty.jpg">
+
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="banners">
+                <div class="banner">пост 1</div>
+                <div class="banner">пост 2</div>
+                <div class="banner">пост 3</div>
+            </div>
+            <div class="posts" id="posts">
+                <div class="post">
+                    <h1>Пост #1</h1>
+                    <p>Слово «трускавки», яке вживають щодо садових суниць на Галичині, Волині, Закарпатті, утворене від
+                        звуконаслідувального кореня trusk- («тріск», «хруст») і пов'язане або з хрускотом насінин на
+                        зубах при розжовуванні плодів, або з тріском від ламкого листя суниць </p>
+
+                </div>
+                <div class="post">
+                    <h1>Пост #2</h1>
+                    <p>У Російській імперії садові суниці з'явилися в XIX ст.; одним з перших був завезений сорт
+                        «Вікторія» (названий на честь королеви Вікторії), як один з найбільш морозостійких. </p>
+                </div>
+                <div class="post">
+                    <h1>Пост #3</h1>
+                    <p>Слово полуниці вважають похідним від дієслова паленіти (у давнішій формі *поленіти) — «яскраво
+                        горіти», «червоніти», «рум'яніти». </p>
+                </div>
+            </div>
+            <div class="comments" id="comments">
+                <div class="comment">
+                    <div class="comment-side">
+                        <div class="comment-avatar">
+
+                        </div>
+                    </div>
+                    <div class="comment-base">
+                        <h1 class="comment-title">Коментар #1</h1>
+                        <p>Полуниця має потужну протизапальну й протимікробну дію. Тому при хворому шлунку їх прописують
+                            як ліки.</p>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="comment-side">
+                        <div class="comment-avatar">
+
+                        </div>
+                    </div>
+                    <div class="comment-base">
+                        <h1 class="comment-title">Коментар #2</h1>
+                        <p> Антисептичні властивості полуниці використовуються для лікування запальних захворювань
+                            носогорла (застосовують водний настій плодів, ним полощуть горло при ангінах і рот при
+                            стоматитах) і усувають неприємний запах з рота.</p>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="comment-side">
+                        <div class="comment-avatar">
+
+                        </div>
+                    </div>
+                    <div class="comment-base">
+                        <h1 class="comment-title">Коментар #3</h1>
+                        <p>Полуниця пригнічує розвиток вірусу грипу</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    <!-- Footer -->
-    <footer>
-        <div>
-            <div>
-                <img src="Frame56.png" width="250" draggable="false" alt="Logo">
-            </div>
-            <div class="footer-columns">
-                <div class="footer-column">
-                    <ul class="menu">
-                        <il><a href="#">Home</a></il>
-                        <il class= "drpdown"><a>Services</a>
-                           <ul class="dropdown-content">
-                        <li><a href="#">Web desiggn</a></li>
-                        <li><a href="#">SEO</a></li>
-                        <li><a href="#">Marketing</a></li>
-                           </ul>
-                        </il>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <main>
-                        <div class="post">
-                            <p>
-                            </ul>   
-                </div>
-                <div class="footer-column">
-                    <h3>Contact me</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro est laborum, repellendus
-                        doloremque sit officia culpa veritatis tempore totam vitae rerum aliquid sapiente molestiae
-                        placeat illo, esse provident consequuntur harum.</p>
-                    <br><strong>Email: <a>contact@gmail.com</a></strong>
-                </div>
-            </div>
-            <small>Copyright &copy; 2024 Max Bashmanivskiy</small>
-        </div>
-    </footer>
-    <script>
-        $(document).ready(function () {
-          $(".owl-carousel").owlCarousel({
-            items: 3,
-            loop: true,
-            margin: 10,
-            nav: true,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            autoplayHoverPause: true,
-          })
-        })
-      </script>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/-452p_9ESbM?si=78HHvoWkD5jqN47Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </body>
 
 </html>
-
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-    
-    <script>
-        $(document).ready(function () {
-          $(".owl-carousel").owlCarousel({
-            loop:true,
-            autoplay:true,
-            autoplayTimeout:1000,
-            margin:10,
-            nav:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:5
-                }
-            }
-          })
-        })
-      </script>
-
-
-  
